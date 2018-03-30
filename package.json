@@ -1,0 +1,20 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "start": "concurrently \"yarn react-start\" \"cd server && yarn start\"",
+    "react-build": "react-scripts build",
+    "build": "concurrently \"yarn react-build\" \"cd server && yarn build\""
+  },
+  "proxy": "http:/localhost:3001"
+}
